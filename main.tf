@@ -5,7 +5,7 @@ locals {
 }
 
 module "ec2" {
-  source = "git::vs-ssh.visualstudio.com:v3/PATH TO REPO HERE"
+  source = "git::vs-ssh.visualstudio.com:v3/EC2BuildModule"
   
   for_each          = { for server in local.instances : server.name => server }
     instance_profile         = var.instance_profile
